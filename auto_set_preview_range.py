@@ -12,6 +12,7 @@ def unregister_properties():
     del bpy.types.Scene.auto_set_preview_range
 
 # Define the event listener function
+@bpy.app.handlers.persistent
 def update_preview_range(scene):
     obj = bpy.context.view_layer.objects.active
     if obj and obj.animation_data:
@@ -26,13 +27,13 @@ def update_preview_range(scene):
 
 # Register the event handler
 def register_handler():
-    bpy.app.handlers.frame_change_post.append(update_preview_range) 
     bpy.app.handlers.animation_playback_pre.append(update_preview_range)
+    bpy.app.handlers.load_post.append(update_preview_range)
     # bpy.app.handlers.depsgraph_update_post.append(update_preview_range)
 
 def unregister_handler():
-    bpy.app.handlers.frame_change_post.remove(update_preview_range) 
     bpy.app.handlers.animation_playback_pre.remove(update_preview_range)
+    bpy.app.handlers.load_post.remove(update_preview_range)
     # bpy.app.handlers.depsgraph_update_post.remove(update_preview_range)
 
 def draw(self, context):

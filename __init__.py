@@ -1,8 +1,8 @@
 bl_info = {
     "name": "Auto Action Preview",
     "author": "Zakrich",
-    "version": (1, 0),
-    "blender": (4, 0, 0),
+    "version": (1, 0, 1),
+    "blender": (4, 2, 0),
     "description": "Auto set preview frame range to match current action, for more convenient animation loop preview.",
     "warning": "",
     "doc_url": "https://github.com/sacrish/Auto-Action-Preview",
