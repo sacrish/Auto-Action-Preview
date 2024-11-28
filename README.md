@@ -2,7 +2,7 @@
 
 ## What is this
 
-This is a Blender plugin that automatically set the scene's preview frame range to match current Action. It is designed to make previewing loop animations more convenient (especially for game animators).
+This is a Blender plugin that automatically sets the scene's preview frame range to match current Action. It is designed to make previewing loop animations more convenient (especially for game animators).
 
 ## How to install
 
