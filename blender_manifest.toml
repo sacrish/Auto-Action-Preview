@@ -1,7 +1,7 @@
 schema_version = "1.0.0"
 
 id = "auto_action_preview"
-version = "1.0.1"
+version = "1.0.2"
 name = "Auto Action Preview"
 tagline = "Auto set preview frame range to match current action, for more convenient animation loop preview."
 maintainer = "Zakrich"

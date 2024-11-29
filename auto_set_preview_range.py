@@ -20,7 +20,7 @@ def update_preview_range(scene):
         if action and scene.auto_set_preview_range:
             # print(f"New action selected: {action.name}")
             
-            # Set the scene's frame range based on the action's frame range
+            # Set the scene's preview frame range based on the action's frame range
             scene.frame_preview_start = int(action.frame_range[0])
             scene.frame_preview_end = int(action.frame_range[1])
             #print(f"Scene frame range set to: {scene.frame_start} - {scene.frame_end}")
@@ -28,13 +28,9 @@ def update_preview_range(scene):
 # Register the event handler
 def register_handler():
     bpy.app.handlers.animation_playback_pre.append(update_preview_range)
-    bpy.app.handlers.load_post.append(update_preview_range)
-    # bpy.app.handlers.depsgraph_update_post.append(update_preview_range)
 
 def unregister_handler():
     bpy.app.handlers.animation_playback_pre.remove(update_preview_range)
-    bpy.app.handlers.load_post.remove(update_preview_range)
-    # bpy.app.handlers.depsgraph_update_post.remove(update_preview_range)
 
 def draw(self, context):
     layout = self.layout
